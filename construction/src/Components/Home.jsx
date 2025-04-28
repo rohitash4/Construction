@@ -3,8 +3,13 @@ import architecture from "../assets/architecture.jpg"
 import workers from "../assets/workers.jpg"
 import workers1 from "../assets/workers1.jpg"
 import workers2 from "../assets/workers2.jpg"
+import users from "../assets/users.jpg"
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
+import { FaRegStar } from "react-icons/fa6";
+import { ImQuotesLeft } from "react-icons/im";
+import '../index.css'
+
 
 
 import 'swiper/css/bundle'
@@ -58,26 +63,194 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className=" h-auto px-5 md:px-50 flex flex-col justify-center items-center ">
-                <div className="bg-amber-500 w-[100%] h-100 ">
+            <section className=" h-[100%] px-5 md:px-30 mt-20 mb-20 md:mb-30 md:mt-30 flex flex-col justify-center items-center ">
+                <div className=" w-[100%] h-[100%]">
                     <Swiper
                         slidesPerView={3}
-                        spaceBetween={30}
+                        loop={true}
                         pagination={{
                         clickable: true,
                         }}
-                        modules={[Pagination]}
-                        className="mySwiper"
+                        breakpoints={{
+
+                            380:{
+                                slidesPerView:1,
+                                spaceBetween: 20,
+                            },
+
+                            640: {
+                              slidesPerView: 2,
+                              spaceBetween: 20,
+                            },
+                            768: {
+                              slidesPerView: 2,
+                              spaceBetween: 40,
+                            },
+                            1024: {
+                              slidesPerView: 3,
+                              spaceBetween: 50,
+                            },
+                          }}         
+                        
+                        modules={[Pagination, Navigation]}
+                        className="mySwiper h-[420px] p-20"
                     >
-                        <SwiperSlide className="h-100 bg-blue-500">Slide 1</SwiperSlide>
-                        <SwiperSlide className="h-[400px] bg-green-500 ">Slide 2</SwiperSlide>
-                        <SwiperSlide className="h-[400px] ">Slide 3</SwiperSlide>
-                        <SwiperSlide className="h-[400px] ">Slide 4</SwiperSlide>
-                        <SwiperSlide className="h-[400px] ">Slide 5</SwiperSlide>
-                        <SwiperSlide className="h-[400px] ">Slide 6</SwiperSlide>
-                        <SwiperSlide className="h-[400px] ">Slide 7</SwiperSlide>
-                        <SwiperSlide className="h-[400px] ">Slide 8</SwiperSlide>
-                        <SwiperSlide className="h-[400px] ">Slide 9</SwiperSlide>
+                        <SwiperSlide className=" border-[1px] border-[rgba(0,0,0,.1)] shadow-xl/20 box rounded-3xl p-5 ">
+                            <div className="flex flex-row justify-between text-2xl">
+                                <div className=" text-4xl text-[rgba(0,0,0,0.3)] ">
+                                    <ImQuotesLeft />
+                                </div>
+                                <div className="flex flex-row justify-center text-amber-400">
+                                    <FaRegStar />
+                                    <FaRegStar />
+                                    <FaRegStar />
+                                    <FaRegStar />
+                                    <FaRegStar />
+                                </div>
+                            </div>
+                            <p className=" text-md text-[#1d1d1d] mt-5">Integrating leezyAl has been a game-changer for our customer support workflow. We've seen a 40% decrease in response times and a significant uptick in customer satisfaction scores. The Al's ability to understand and process complex queries has freed our team to handle more nuanced issues.</p>
+
+                            <div className=" mt-8 flex flex-row justify-start ">
+                                <div className="mr-8">
+                                    <img src={users} className="rounded-full w-12 h-12 object-cover size-1 "></img>
+                                </div>
+                                <div>
+                                    <h5 className="text-[rgba(0,0,0,1)]"> John Doe </h5>
+                                    <p className="text-[rgba(0,0,0,.5)]"> Technical Staff Head</p>
+                                </div>
+                            </div>
+
+                        </SwiperSlide>
+                        <SwiperSlide className=" border-[1px] border-[rgba(0,0,0,.1)] shadow-xl/20 box rounded-3xl p-5 ">
+                            <div className="flex flex-row justify-between text-2xl">
+                                <div className=" text-4xl text-[rgba(0,0,0,0.3)] ">
+                                    <ImQuotesLeft />
+                                </div>
+                                <div className="flex flex-row justify-center text-amber-400">
+                                    <FaRegStar />
+                                    <FaRegStar />
+                                    <FaRegStar />
+                                    <FaRegStar />
+                                    <FaRegStar />
+                                </div>
+                            </div>
+                            <p className=" text-md text-[#1d1d1d] mt-5">Integrating leezyAl has been a game-changer for our customer support workflow. We've seen a 40% decrease in response times and a significant uptick in customer satisfaction scores. The Al's ability to understand and process complex queries has freed our team to handle more nuanced issues.</p>
+
+                            <div className=" mt-8 flex flex-row justify-start ">
+                                <div className="mr-8">
+                                    <img src={users} className="rounded-full w-12 h-12 object-cover size-1 "></img>
+                                </div>
+                                <div>
+                                    <h5 className="text-[rgba(0,0,0,1)]"> John Doe </h5>
+                                    <p className="text-[rgba(0,0,0,.5)]"> Technical Staff Head</p>
+                                </div>
+                            </div>
+
+                        </SwiperSlide>
+                        <SwiperSlide className=" border-[1px] border-[rgba(0,0,0,.1)] shadow-xl/20 box rounded-3xl p-5 ">
+                            <div className="flex flex-row justify-between text-2xl">
+                                <div className=" text-4xl text-[rgba(0,0,0,0.3)] ">
+                                    <ImQuotesLeft />
+                                </div>
+                                <div className="flex flex-row justify-center text-amber-400">
+                                    <FaRegStar />
+                                    <FaRegStar />
+                                    <FaRegStar />
+                                    <FaRegStar />
+                                    <FaRegStar />
+                                </div>
+                            </div>
+                            <p className=" text-md text-[#1d1d1d] mt-5">Integrating leezyAl has been a game-changer for our customer support workflow. We've seen a 40% decrease in response times and a significant uptick in customer satisfaction scores. The Al's ability to understand and process complex queries has freed our team to handle more nuanced issues.</p>
+
+                            <div className=" mt-8 flex flex-row justify-start ">
+                                <div className="mr-8">
+                                    <img src={users} className="rounded-full w-12 h-12 object-cover size-1 "></img>
+                                </div>
+                                <div>
+                                    <h5 className="text-[rgba(0,0,0,1)]"> John Doe </h5>
+                                    <p className="text-[rgba(0,0,0,.5)]"> Technical Staff Head</p>
+                                </div>
+                            </div>
+
+                        </SwiperSlide>
+                        <SwiperSlide className=" border-[1px] border-[rgba(0,0,0,.1)] shadow-xl/20 box rounded-3xl p-5 ">
+                            <div className="flex flex-row justify-between text-2xl">
+                                <div className=" text-4xl text-[rgba(0,0,0,0.3)] ">
+                                    <ImQuotesLeft />
+                                </div>
+                                <div className="flex flex-row justify-center text-amber-400">
+                                    <FaRegStar />
+                                    <FaRegStar />
+                                    <FaRegStar />
+                                    <FaRegStar />
+                                    <FaRegStar />
+                                </div>
+                            </div>
+                            <p className=" text-md text-[#1d1d1d] mt-5">Integrating leezyAl has been a game-changer for our customer support workflow. We've seen a 40% decrease in response times and a significant uptick in customer satisfaction scores. The Al's ability to understand and process complex queries has freed our team to handle more nuanced issues.</p>
+
+                            <div className=" mt-8 flex flex-row justify-start ">
+                                <div className="mr-8">
+                                    <img src={users} className="rounded-full w-12 h-12 object-cover size-1 "></img>
+                                </div>
+                                <div>
+                                    <h5 className="text-[rgba(0,0,0,1)]"> John Doe </h5>
+                                    <p className="text-[rgba(0,0,0,.5)]"> Technical Staff Head</p>
+                                </div>
+                            </div>
+
+                        </SwiperSlide>
+                        <SwiperSlide className=" border-[1px] border-[rgba(0,0,0,.1)] shadow-xl/20 box rounded-3xl p-5 ">
+                            <div className="flex flex-row justify-between text-2xl">
+                                <div className=" text-4xl text-[rgba(0,0,0,0.3)] ">
+                                    <ImQuotesLeft />
+                                </div>
+                                <div className="flex flex-row justify-center text-amber-400">
+                                    <FaRegStar />
+                                    <FaRegStar />
+                                    <FaRegStar />
+                                    <FaRegStar />
+                                    <FaRegStar />
+                                </div>
+                            </div>
+                            <p className=" text-md text-[#1d1d1d] mt-5">Integrating leezyAl has been a game-changer for our customer support workflow. We've seen a 40% decrease in response times and a significant uptick in customer satisfaction scores. The Al's ability to understand and process complex queries has freed our team to handle more nuanced issues.</p>
+
+                            <div className=" mt-8 flex flex-row justify-start ">
+                                <div className="mr-8">
+                                    <img src={users} className="rounded-full w-12 h-12 object-cover size-1 "></img>
+                                </div>
+                                <div>
+                                    <h5 className="text-[rgba(0,0,0,1)]"> John Doe </h5>
+                                    <p className="text-[rgba(0,0,0,.5)]"> Technical Staff Head</p>
+                                </div>
+                            </div>
+
+                        </SwiperSlide>
+                        <SwiperSlide className=" border-[1px] border-[rgba(0,0,0,.1)] shadow-xl/20 box rounded-3xl p-5 ">
+                            <div className="flex flex-row justify-between text-2xl">
+                                <div className=" text-4xl text-[rgba(0,0,0,0.3)] ">
+                                    <ImQuotesLeft />
+                                </div>
+                                <div className="flex flex-row justify-center text-amber-400">
+                                    <FaRegStar />
+                                    <FaRegStar />
+                                    <FaRegStar />
+                                    <FaRegStar />
+                                    <FaRegStar />
+                                </div>
+                            </div>
+                            <p className=" text-md text-[#1d1d1d] mt-5">Integrating leezyAl has been a game-changer for our customer support workflow. We've seen a 40% decrease in response times and a significant uptick in customer satisfaction scores. The Al's ability to understand and process complex queries has freed our team to handle more nuanced issues.</p>
+
+                            <div className=" mt-8 flex flex-row justify-start ">
+                                <div className="mr-8">
+                                    <img src={users} className="rounded-full w-12 h-12 object-cover size-1 "></img>
+                                </div>
+                                <div>
+                                    <h5 className="text-[rgba(0,0,0,1)]"> John Doe </h5>
+                                    <p className="text-[rgba(0,0,0,.5)]"> Technical Staff Head</p>
+                                </div>
+                            </div>
+
+                        </SwiperSlide>
                     </Swiper>
                 </div>
             </section>
