@@ -63,7 +63,13 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className=" h-[100%] px-5 md:px-30 mt-20 mb-20 md:mb-30 md:mt-30 flex flex-col justify-center items-center ">
+            <section>
+                <div>
+                    <h3 className=" font-semibold text-red-600 text-xl ">What We Offer</h3>
+                </div>
+            </section>
+
+            <section className=" h-[100%] px-5 xl:px-30 mt-20 mb-20 md:mb-30 md:mt-30 flex flex-col justify-center items-center ">
                 <div className=" w-[100%] h-[100%]">
                     <Swiper
                         slidesPerView={3}
@@ -85,7 +91,7 @@ export default function Home() {
                             },
                             768: {
                               slidesPerView: 3,
-                              spaceBetween: 40,
+                              spaceBetween: 20,
                             },
                             1024: {
                               slidesPerView: 3,
@@ -94,7 +100,7 @@ export default function Home() {
                           }}         
                         
                         modules={[Pagination, Navigation]}
-                        className="mySwiper md:h-[420px] w-[100%] lg:w-[100%] overflow-hidden md:p-20"
+                        className="mySwiper h-[500px] md:h-[420px] md:w-[100%] overflow-hidden md:p-20"
                     >
                         <SwiperSlide className=" border-[1px] border-[rgba(0,0,0,.1)] shadow-xl box rounded-3xl p-5 ">
                             <div className="flex flex-row justify-between text-2xl">
