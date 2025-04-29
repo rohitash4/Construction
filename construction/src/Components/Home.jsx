@@ -4,6 +4,12 @@ import workers from "../assets/workers.jpg"
 import workers1 from "../assets/workers1.jpg"
 import workers2 from "../assets/workers2.jpg"
 import users from "../assets/users.jpg"
+import services1 from "../assets/services1.jpg"
+import services2 from "../assets/services2.jpg"
+import services3 from "../assets/services3.jpg"
+import services4 from "../assets/services4.jpg"
+import services5 from "../assets/services5.jpg"
+import services6 from "../assets/services6.jpg"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import { FaRegStar } from "react-icons/fa6";
@@ -63,9 +69,20 @@ export default function Home() {
                 </div>
             </section>
 
-            <section>
-                <div>
-                    <h3 className=" font-semibold text-red-600 text-xl ">What We Offer</h3>
+            <section className="flex flex-col justify-center items-center px-5 md:px-50 md:mt-30 mt-20">
+                <div className="text-black border-l-2">
+                    <h3 className=" font-semibold text-lg ml-2 text-red-600 ">What We Offer</h3>
+                </div>
+                <h2 className="text-5xl text-[#1d1d1d] font-bold">Our Services</h2>
+                <div className="w-[100%] mt-20 flex md:flex-row flex-col">
+                    <div className="md:w-[33.33%] md:h-[500px] bg-gray-100 ">
+                        <img src={services1} className=" h-[250px] object-cover "></img>
+                        <div className=" border-1 border-red-600 w-[100%] h-[250px] px-5 py-8 flex flex-col items-start gap-4">
+                            <h4 className=" text-2xl font-bold uppercase text-[#1d1d1d] ">Roofing</h4>
+                            <p className="text-lg">Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum.</p>
+                            <button className=" bg-red-600 py-1 px-5 cursor-pointer text-white uppercase font-semibold ">Read More <span>➞</span> </button>
+                        </div>
+                    </div>
                 </div>
             </section>
 
