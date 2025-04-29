@@ -68,6 +68,7 @@ export default function Home() {
                     <Swiper
                         slidesPerView={3}
                         loop={true}
+                        spaceBetween={40}
                         pagination={{
                         clickable: true,
                         }}
@@ -75,7 +76,7 @@ export default function Home() {
 
                             380:{
                                 slidesPerView:1,
-                                spaceBetween: 20,
+                                spaceBetween: 10,
                             },
 
                             640: {
@@ -83,7 +84,7 @@ export default function Home() {
                               spaceBetween: 20,
                             },
                             768: {
-                              slidesPerView: 2,
+                              slidesPerView: 3,
                               spaceBetween: 40,
                             },
                             1024: {
@@ -93,9 +94,9 @@ export default function Home() {
                           }}         
                         
                         modules={[Pagination, Navigation]}
-                        className="mySwiper h-[420px] p-20"
+                        className="mySwiper md:h-[420px] w-[100%] lg:w-[100%] overflow-hidden md:p-20"
                     >
-                        <SwiperSlide className=" border-[1px] border-[rgba(0,0,0,.1)] shadow-xl/20 box rounded-3xl p-5 ">
+                        <SwiperSlide className=" border-[1px] border-[rgba(0,0,0,.1)] shadow-xl box rounded-3xl p-5 ">
                             <div className="flex flex-row justify-between text-2xl">
                                 <div className=" text-4xl text-[rgba(0,0,0,0.3)] ">
                                     <ImQuotesLeft />
@@ -121,7 +122,7 @@ export default function Home() {
                             </div>
 
                         </SwiperSlide>
-                        <SwiperSlide className=" border-[1px] border-[rgba(0,0,0,.1)] shadow-xl/20 box rounded-3xl p-5 ">
+                        <SwiperSlide className=" border-[1px] border-[rgba(0,0,0,.1)] shadow-xl box rounded-3xl p-5 ">
                             <div className="flex flex-row justify-between text-2xl">
                                 <div className=" text-4xl text-[rgba(0,0,0,0.3)] ">
                                     <ImQuotesLeft />
@@ -147,7 +148,7 @@ export default function Home() {
                             </div>
 
                         </SwiperSlide>
-                        <SwiperSlide className=" border-[1px] border-[rgba(0,0,0,.1)] shadow-xl/20 box rounded-3xl p-5 ">
+                        <SwiperSlide className=" border-[1px] border-[rgba(0,0,0,.1)] shadow-xl box rounded-3xl p-5 ">
                             <div className="flex flex-row justify-between text-2xl">
                                 <div className=" text-4xl text-[rgba(0,0,0,0.3)] ">
                                     <ImQuotesLeft />
@@ -173,7 +174,7 @@ export default function Home() {
                             </div>
 
                         </SwiperSlide>
-                        <SwiperSlide className=" border-[1px] border-[rgba(0,0,0,.1)] shadow-xl/20 box rounded-3xl p-5 ">
+                        <SwiperSlide className=" border-[1px] border-[rgba(0,0,0,.1)] shadow-xl box rounded-3xl p-5 ">
                             <div className="flex flex-row justify-between text-2xl">
                                 <div className=" text-4xl text-[rgba(0,0,0,0.3)] ">
                                     <ImQuotesLeft />
@@ -199,7 +200,7 @@ export default function Home() {
                             </div>
 
                         </SwiperSlide>
-                        <SwiperSlide className=" border-[1px] border-[rgba(0,0,0,.1)] shadow-xl/20 box rounded-3xl p-5 ">
+                        <SwiperSlide className=" border-[1px] border-[rgba(0,0,0,.1)] shadow-xl box rounded-3xl p-5 ">
                             <div className="flex flex-row justify-between text-2xl">
                                 <div className=" text-4xl text-[rgba(0,0,0,0.3)] ">
                                     <ImQuotesLeft />
@@ -225,7 +226,7 @@ export default function Home() {
                             </div>
 
                         </SwiperSlide>
-                        <SwiperSlide className=" border-[1px] border-[rgba(0,0,0,.1)] shadow-xl/20 box rounded-3xl p-5 ">
+                        <SwiperSlide className=" border-[1px] border-[rgba(0,0,0,.1)] shadow-xl box rounded-3xl p-5 ">
                             <div className="flex flex-row justify-between text-2xl">
                                 <div className=" text-4xl text-[rgba(0,0,0,0.3)] ">
                                     <ImQuotesLeft />
