@@ -36,7 +36,7 @@ export default function Home() {
             <section className="px-5 py-20 md:px-50 md:py-20 justify-center items-center">
                 <div className="grid md:grid-cols-2 gap-7 ">
                     <div className="">
-                        <h2 className="text-[#1d1d1d] uppercase text-4xl md:text-5xl font-bold">About Us</h2>
+                        <h2 className="text-[#222222] uppercase text-4xl md:text-5xl font-bold">About Us</h2>
                         <p className="text-lg pt-5 md:pt-10">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.<br/><br/>
 
                         Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
@@ -69,25 +69,68 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="flex flex-col justify-center items-center px-5 md:px-50 md:mt-30 mt-20">
+            <section className="flex flex-col justify-center items-center bg-[url(./assets/bg-image.jpg)] bg-no-repeat bg-cover h-auto bg-[#f4f4f4] ">
+            <div className="h-full w-full bg-[rgba(255,255,255,0.9)] px-5 md:px-50 py-20 flex justify-center flex-col items-center ">
                 <div className="text-black border-l-2">
                     <h3 className=" font-semibold text-lg ml-2 text-red-600 ">What We Offer</h3>
                 </div>
                 <h2 className="text-5xl text-[#1d1d1d] font-bold">Our Services</h2>
-                <div className="w-[100%] mt-20 flex md:flex-row flex-col">
-                    <div className="md:w-[33.33%] md:h-[500px] bg-gray-100 ">
+                <div className="w-[100%] gap-7 mt-20 grid md:grid-cols-3 grid-cols-1">
+                    <div className=" md:h-[500px] bg-gray-100 ">
                         <img src={services1} className=" h-[250px] object-cover "></img>
                         <div className=" border-1 border-red-600 w-[100%] h-[250px] px-5 py-8 flex flex-col items-start gap-4">
-                            <h4 className=" text-2xl font-bold uppercase text-[#1d1d1d] ">Roofing</h4>
+                            <h4 className=" text-2xl font-bold uppercase text-[#222222] ">Roofing</h4>
+                            <p className="text-lg">Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum.</p>
+                            <button className=" bg-red-600 py-1 px-5 cursor-pointer text-white uppercase font-semibold ">Read More <span>➞</span> </button>
+                        </div>
+                    </div>
+                    <div className=" md:h-[500px] bg-gray-100 ">
+                        <img src={services2} className=" h-[250px] object-cover "></img>
+                        <div className=" border-1 border-red-600 w-[100%] h-[250px] px-5 py-8 flex flex-col items-start gap-4">
+                            <h4 className=" text-2xl font-bold uppercase text-[#222222] ">Gutters</h4>
+                            <p className="text-lg">Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum.</p>
+                            <button className=" bg-red-600 py-1 px-5 cursor-pointer text-white uppercase font-semibold ">Read More <span>➞</span> </button>
+                        </div>
+                    </div>
+                    <div className=" md:h-[500px] bg-gray-100 ">
+                        <img src={services3} className=" h-[250px] object-cover "></img>
+                        <div className=" border-1 border-red-600 w-[100%] h-[250px] px-5 py-8 flex flex-col items-start gap-4">
+                            <h4 className=" text-2xl font-bold uppercase text-[#222222] ">Fencing</h4>
+                            <p className="text-lg">Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum.</p>
+                            <button className=" bg-red-600 py-1 px-5 cursor-pointer text-white uppercase font-semibold ">Read More <span>➞</span> </button>
+                        </div>
+                    </div>
+                    <div className="md:h-[500px] bg-gray-100 ">
+                        <img src={services4} className=" h-[250px] object-cover "></img>
+                        <div className=" border-1 border-red-600 w-[100%] h-[250px] px-5 py-8 flex flex-col items-start gap-4">
+                            <h4 className=" text-2xl font-bold uppercase text-[#222222] ">Garage Doors</h4>
+                            <p className="text-lg">Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum.</p>
+                            <button className=" bg-red-600 py-1 px-5 cursor-pointer text-white uppercase font-semibold ">Read More <span>➞</span> </button>
+                        </div>
+                    </div>
+                    <div className=" md:h-[500px] bg-gray-100 ">
+                        <img src={services5} className=" h-[250px] object-cover "></img>
+                        <div className=" border-1 border-red-600 w-[100%] h-[250px] px-5 py-8 flex flex-col items-start gap-4">
+                            <h4 className=" text-2xl font-bold uppercase text-[#222222] ">Windows</h4>
+                            <p className="text-lg">Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum.</p>
+                            <button className=" bg-red-600 py-1 px-5 cursor-pointer text-white uppercase font-semibold ">Read More <span>➞</span> </button>
+                        </div>
+                    </div>
+                    <div className=" md:h-[500px] bg-gray-100 ">
+                        <img src={services6} className=" h-[250px] object-cover "></img>
+                        <div className=" border-1 border-red-600 w-[100%] h-[250px] px-5 py-8 flex flex-col items-start gap-4">
+                            <h4 className=" text-2xl font-bold uppercase text-[#222222] ">Interior & Exterior</h4>
                             <p className="text-lg">Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum.</p>
                             <button className=" bg-red-600 py-1 px-5 cursor-pointer text-white uppercase font-semibold ">Read More <span>➞</span> </button>
                         </div>
                     </div>
                 </div>
+            </div>
             </section>
 
             <section className=" h-[100%] px-5 xl:px-30 mt-20 mb-20 md:mb-30 md:mt-30 flex flex-col justify-center items-center ">
-                <div className=" w-[100%] h-[100%]">
+                <h2 className="text-5xl text-[#222222] font-bold">Testimonials</h2>
+                <div className=" w-[100%] h-[100%] mt-20">
                     <Swiper
                         slidesPerView={3}
                         loop={true}
@@ -132,7 +175,7 @@ export default function Home() {
                                     <FaRegStar />
                                 </div>
                             </div>
-                            <p className=" text-md text-[#1d1d1d] mt-5">Integrating leezyAl has been a game-changer for our customer support workflow. We've seen a 40% decrease in response times and a significant uptick in customer satisfaction scores. The Al's ability to understand and process complex queries has freed our team to handle more nuanced issues.</p>
+                            <p className=" text-md text-[#222222] mt-5">Integrating leezyAl has been a game-changer for our customer support workflow. We've seen a 40% decrease in response times and a significant uptick in customer satisfaction scores. The Al's ability to understand and process complex queries has freed our team to handle more nuanced issues.</p>
 
                             <div className=" mt-8 flex flex-row justify-start ">
                                 <div className="mr-8">
@@ -158,7 +201,7 @@ export default function Home() {
                                     <FaRegStar />
                                 </div>
                             </div>
-                            <p className=" text-md text-[#1d1d1d] mt-5">Integrating leezyAl has been a game-changer for our customer support workflow. We've seen a 40% decrease in response times and a significant uptick in customer satisfaction scores. The Al's ability to understand and process complex queries has freed our team to handle more nuanced issues.</p>
+                            <p className=" text-md text-[#222222] mt-5">Integrating leezyAl has been a game-changer for our customer support workflow. We've seen a 40% decrease in response times and a significant uptick in customer satisfaction scores. The Al's ability to understand and process complex queries has freed our team to handle more nuanced issues.</p>
 
                             <div className=" mt-8 flex flex-row justify-start ">
                                 <div className="mr-8">
@@ -184,7 +227,7 @@ export default function Home() {
                                     <FaRegStar />
                                 </div>
                             </div>
-                            <p className=" text-md text-[#1d1d1d] mt-5">Integrating leezyAl has been a game-changer for our customer support workflow. We've seen a 40% decrease in response times and a significant uptick in customer satisfaction scores. The Al's ability to understand and process complex queries has freed our team to handle more nuanced issues.</p>
+                            <p className=" text-md text-[#222222] mt-5">Integrating leezyAl has been a game-changer for our customer support workflow. We've seen a 40% decrease in response times and a significant uptick in customer satisfaction scores. The Al's ability to understand and process complex queries has freed our team to handle more nuanced issues.</p>
 
                             <div className=" mt-8 flex flex-row justify-start ">
                                 <div className="mr-8">
@@ -210,7 +253,7 @@ export default function Home() {
                                     <FaRegStar />
                                 </div>
                             </div>
-                            <p className=" text-md text-[#1d1d1d] mt-5">Integrating leezyAl has been a game-changer for our customer support workflow. We've seen a 40% decrease in response times and a significant uptick in customer satisfaction scores. The Al's ability to understand and process complex queries has freed our team to handle more nuanced issues.</p>
+                            <p className=" text-md text-[#222222] mt-5">Integrating leezyAl has been a game-changer for our customer support workflow. We've seen a 40% decrease in response times and a significant uptick in customer satisfaction scores. The Al's ability to understand and process complex queries has freed our team to handle more nuanced issues.</p>
 
                             <div className=" mt-8 flex flex-row justify-start ">
                                 <div className="mr-8">
@@ -236,7 +279,7 @@ export default function Home() {
                                     <FaRegStar />
                                 </div>
                             </div>
-                            <p className=" text-md text-[#1d1d1d] mt-5">Integrating leezyAl has been a game-changer for our customer support workflow. We've seen a 40% decrease in response times and a significant uptick in customer satisfaction scores. The Al's ability to understand and process complex queries has freed our team to handle more nuanced issues.</p>
+                            <p className=" text-md text-[#222222] mt-5">Integrating leezyAl has been a game-changer for our customer support workflow. We've seen a 40% decrease in response times and a significant uptick in customer satisfaction scores. The Al's ability to understand and process complex queries has freed our team to handle more nuanced issues.</p>
 
                             <div className=" mt-8 flex flex-row justify-start ">
                                 <div className="mr-8">

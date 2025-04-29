@@ -25,7 +25,7 @@ export default function Navbar () {
     return(
         <>
             <div className="header">
-                <div className="top_header md:px-50 px-5 bg-neutral-900 py-3 flex md:flex-row justify-between">
+                <div className="top_header md:px-50 px-5 bg-[#222222] py-3 flex md:flex-row justify-between">
                     <div className="social_icons_box flex flex-row justify-center items-center gap-2">
                         <FaFacebook color="#1877F2" size={20} />
                         <FaTwitter color="#1da1f2" size={20} />
