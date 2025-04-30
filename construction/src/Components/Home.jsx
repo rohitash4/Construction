@@ -23,8 +23,11 @@ import { useForm } from 'react-hook-form';
 import 'swiper/css/bundle'
 
 export default function Home() {
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm();
+    const onSubmit = async (data) => {
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+        console.log(data);
+    };
     console.log(errors);
   
 
@@ -343,27 +346,52 @@ export default function Home() {
                     </div>
             </section>
 
-            <section className=" h-100 w-full mb-40 md:mb-20 bg-white md:px-50 z-0 px-5 ">
-                <div className=" w-full h-[650px] -translate-y-50 md:-translate-y-70 z-10 bg-amber-500 flex flex-col md:flex-row ">
+            <section className=" h-[100%] md:h-100 w-full md:mb-20 bg-white md:px-50 z-0 px-5 ">
+                <div className=" w-full h-auto md:h-[650px] -translate-y-50 md:-translate-y-70 z-10 flex flex-col md:flex-row ">
                     <div className=" w-full md:w-[50%] h-full bg-[url(./assets/bg-image5.jpg)] bg-no-repeat bg-cover  ">
                         
-                        <div className=" bg-[rgba(228,228,228,0.8)] h-full w-full p-10 flex flex-col ">
+                        <div className=" bg-[rgba(228,228,228,0.8)] h-auto md:h-full w-[100%] p-5 md:p-10 flex flex-col ">
                             <h3 className=" border-l-2 border-black pl-2 text-red-600 font-semibold "> Get Quote</h3>
-                            <h2 className=" font-bold text-4xl uppercase text-[#222222] mt-5 mb-10 ">Request A Quote</h2>
-                            <form onSubmit={handleSubmit(onSubmit)} className=" grid gap-7 grid-cols-2 items-start ">
-                                <input className=" bg-white p-3 placeholder:text-[#222222] " type="text" placeholder="First name" {...register("First name", {required: true, maxLength: 80})} />
-                                <input className=" bg-white p-3 placeholder:text-[#222222] " type="text" placeholder="Last name" {...register("Last name", {required: true, maxLength: 100})} />
-                                <input className=" bg-white p-3 placeholder:text-[#222222] " type="text" placeholder="Email" {...register("Email", {required: true, pattern: /^\S+@\S+$/i})} />
-                                <input className=" bg-white p-3 placeholder:text-[#222222] " type="text" placeholder="Subject" {...register("Subject", {required:false} )} />
-                                <input className=" bg-white p-3 h-50 col-span-2 placeholder:text-[#222222] placeholder:absolute placeholder:top-[7%] " type="text" placeholder="Message" {...register("Message")} />
+                            <h2 className=" font-bold text-3xl md:text-4xl uppercase text-[#222222] mt-5 mb-10 ">Request A Quote</h2>
+                            <form onSubmit={handleSubmit(onSubmit)} className=" w-full flex flex-col md:grid gap-6 md:grid-cols-2 items-start ">
+                                <div className="w-full">
+                                <input className=" bg-white p-3 placeholder:text-[#22222290] w-[100%] " type="text" placeholder="First Name" {...register("FirstName", {required: "First Name is Required", maxLength: 80})} />
+                                {errors.FirstName && ( <div className="text-red-600 static"> {errors.FirstName.message} </div>)}
+                                </div>
 
-                                <input className=" bg-red-600 py-3.5 px-8 col-span-2 text-white uppercase text-xl font-semibold w-[200px] " value="Send Message" type="submit" />
+                                <div className="w-full">
+                                <input className=" bg-white p-3 placeholder:text-[#22222290] w-full " type="text" placeholder="Last Name" {...register("LastName", {required: "Last Name is Required", maxLength: 100})} />
+                                {errors.LastName && ( <div className="text-red-600 static"> {errors.LastName.message} </div>)}
+                                </div>
+
+                                <div className="w-full">
+                                <input className=" bg-white p-3 placeholder:text-[#22222290] w-full " type="text" placeholder="Email" {...register("Email", {required: " Email is Required ", validate: (value) => {
+                                    if(!value.includes("@")){
+                                        return "Email must include @"
+                                    } 
+                                    return true
+
+                                }, })} />
+                                {errors.Email && ( <div className="text-red-600 static"> {errors.Email.message} </div>)}
+                                </div>
+
+                                <div className="w-full">
+                                <input className=" bg-white p-3 placeholder:text-[#22222290] w-full " type="text" placeholder="Subject" {...register("Subject", {required:"Subject is Required"} )} />
+                                {errors.Subject && ( <div className="text-red-600 static"> {errors.Subject.message} </div>)}
+                                </div>
+
+                                <textarea className=" bg-white p-3 h-50 col-span-2 wrap-normal placeholder:text-[#22222290] placeholder:absolute placeholder:top-[7%] w-full " type="text" placeholder="Message" {...register("Message")} />
+
+                                <button className=" bg-red-600 py-3.5 px-8 col-span-2 text-white uppercase text-lg md:text-xl font-semibold md:w-[210px] " value="Send Message" type="submit" disabled={isSubmitting} >
+                                    {isSubmitting ? "Loading..." : "Send Message"}
+                                </button>
+
                             </form>
                         </div>
 
                     </div>
 
-                    <div className=" w-full md:w-[50%] h-full bg-[url(./assets/workers7.jpg)] bg-no-repeat bg-cover bg-center ">
+                        <div className=" w-full md:w-[50%] h-100 md:h-full bg-[url(./assets/workers7.jpg)] bg-no-repeat bg-cover bg-center ">
 
                     </div>
                 </div>
