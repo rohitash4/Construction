@@ -16,12 +16,17 @@ import { FaRegStar } from "react-icons/fa6";
 import { ImQuotesLeft } from "react-icons/im";
 import '../index.css'
 
+import { useForm } from 'react-hook-form';
+
 
 
 import 'swiper/css/bundle'
 
 export default function Home() {
-    const [count, setCount] = useState(0);
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const onSubmit = data => console.log(data);
+    console.log(errors);
+  
 
     return (
         <>
@@ -319,6 +324,48 @@ export default function Home() {
 
                         </SwiperSlide>
                     </Swiper>
+                </div>
+            </section>
+
+            <section className=" h-150 bg-[url(./assets/bg-image2.jpg)] bg-no-repeat bg-cover ">
+                    <div className="h-full w-full px-5 py-20 md:px-50 bg-[rgba(255,0,0,0.8)] ">
+                        <div className=" flex flex-col md:flex-row justify-between items-center ">
+                            <div className="flex flex-col justify-center items-start gap-3 w-full md:w-[80%] h-[100%] ">
+                                <span className=" border-l-2 border-white px-3 "><h3 className=" text-white text-lg font-medium ">Contact Us</h3></span>
+                                <h2 className=" text-white text-2xl md:text-[40px] font-bold uppercase ">Schedule Free Property Inspection!</h2>
+                                <p className=" text-white text-xl ">Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy.</p>
+                            </div>
+
+                            <div className=" w-full md:w-[20%] h-[100%] flex flex-row md:justify-end items-center ">
+                                <button className=" bg-white mt-5 sm:mt-2 py-3 px-4 uppercase font-semibold text-red-600 text-lg after:content-['➞'] "> Schedule Free </button>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+            <section className=" h-100 w-full mb-40 md:mb-20 bg-white md:px-50 z-0 px-5 ">
+                <div className=" w-full h-[650px] -translate-y-50 md:-translate-y-70 z-10 bg-amber-500 flex flex-col md:flex-row ">
+                    <div className=" w-full md:w-[50%] h-full bg-[url(./assets/bg-image5.jpg)] bg-no-repeat bg-cover  ">
+                        
+                        <div className=" bg-[rgba(228,228,228,0.8)] h-full w-full p-10 flex flex-col ">
+                            <h3 className=" border-l-2 border-black pl-2 text-red-600 font-semibold "> Get Quote</h3>
+                            <h2 className=" font-bold text-4xl uppercase text-[#222222] mt-5 mb-10 ">Request A Quote</h2>
+                            <form onSubmit={handleSubmit(onSubmit)} className=" grid gap-7 grid-cols-2 items-start ">
+                                <input className=" bg-white p-3 placeholder:text-[#222222] " type="text" placeholder="First name" {...register("First name", {required: true, maxLength: 80})} />
+                                <input className=" bg-white p-3 placeholder:text-[#222222] " type="text" placeholder="Last name" {...register("Last name", {required: true, maxLength: 100})} />
+                                <input className=" bg-white p-3 placeholder:text-[#222222] " type="text" placeholder="Email" {...register("Email", {required: true, pattern: /^\S+@\S+$/i})} />
+                                <input className=" bg-white p-3 placeholder:text-[#222222] " type="text" placeholder="Subject" {...register("Subject", {required:false} )} />
+                                <input className=" bg-white p-3 h-50 col-span-2 placeholder:text-[#222222] placeholder:absolute placeholder:top-[7%] " type="text" placeholder="Message" {...register("Message")} />
+
+                                <input className=" bg-red-600 py-3.5 px-8 col-span-2 text-white uppercase text-xl font-semibold w-[200px] " value="Send Message" type="submit" />
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <div className=" w-full md:w-[50%] h-full bg-[url(./assets/workers7.jpg)] bg-no-repeat bg-cover bg-center ">
+
+                    </div>
                 </div>
             </section>
         </>
