@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {Link, NavLink} from "react-router-dom"
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { FaFacebook, FaTwitter, FaInstagramSquare, FaPinterest, FaPhone, FaMapPin, FaEnvelope } from "react-icons/fa";
 
@@ -14,11 +15,11 @@ export default function Navbar () {
       
         // Array containing navigation items
         const navItems = [
-          { id: 1, text: 'Home' },
-          { id: 2, text: 'Company' },
-          { id: 3, text: 'Resources' },
-          { id: 4, text: 'About' },
-          { id: 5, text: 'Contact' },
+          { id: 1, text: 'Home', link: "/" },
+          { id: 2, text: 'Company', link: "/company" },
+          { id: 3, text: 'Resources', link: "/resources" },
+          { id: 4, text: 'About', link: "/about" },
+          { id: 5, text: 'Contact', link: "/contact" },
         ];
       
 
@@ -45,19 +46,22 @@ export default function Navbar () {
 
                 <div className="main_header w-full py-5 px-5 flex flex-row justify-between items-center md:px-50 shadow-md bg-white">
                     <div className="logo cursor-pointer">
-                        <h1 className="text-2xl md:text-2xl font-bold text-black uppercase">Next <span className="text-red-600">Generation</span></h1>
+                        <Link to="/">
+                            <h1 className="text-2xl md:text-2xl font-bold text-black uppercase">Next <span className="text-red-600">Generation</span></h1>
+                        </Link>
                     </div>
                     <div className='flex justify-between items-center text-black'>
 
                         {/* Desktop Navigation */}
                         <ul className='hidden md:flex space-x-6'>
                             {navItems.map(item => (
-                            <li
+                            <Link
+                                to={item.link}
                                 key={item.id}
                                 className='p-2 hover:text-red-600 duration-300 text-black cursor-pointer'
                             >
                                 {item.text}
-                            </li>
+                            </Link>
                             ))}
                         </ul>
 
@@ -85,7 +89,9 @@ export default function Navbar () {
                                 key={item.id}
                                 className='p-4 border-b rounded-xl text-white hover:bg-[#fff] duration-300 hover:text-white cursor-pointer border-gray-600'
                             >
-                                {item.text}
+                                <Link to={item.link} onClick={handleNav} >
+                                    {item.text}
+                                </Link>
                             </li>
                             ))}
                         </ul>
