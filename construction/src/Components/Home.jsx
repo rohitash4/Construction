@@ -33,11 +33,11 @@ export default function Home() {
 
     return (
         <>
-            <section className="px-5 md:px-50 flex flex-col justify-center items-start md:w-full md:h-[700px] h-[450px] bg-[url(./assets/2150576450.jpg)] bg-no-repeat bg-cover bg-center bg-gray-200 bg-blend-multiply">
+            <section className="px-5 md:px-50 flex flex-col justify-center items-start md:w-full md:h-[700px] h-[450px] bg-[url(./assets/2150576450.jpg)] bg-no-repeat bg-cover bg-center bg-gray-400 bg-blend-multiply">
                 <div className="flex flex-col justify-center md:items-center">
-                    <h1 className=" text-4xl md:text-6xl font-semibold"> NEXT GENERATION </h1>
+                    <h1 className=" text-4xl md:text-6xl font-semibold text-white "> NEXT GENERATION </h1>
                     <div className=" ml-5 md:ml-0 relative text-red-600 font-semibold text-xl md:text-4xl uppercase before:absolute after:absolute before:h-[4px] before:bg-red-600 before:top-[50%] before:left-[-5%] before:w-[5%] after:h-[4px] after:w-[5%] after:bg-red-600 md:after:right-[-5%] after:top-[50%] "> Roofing & Construction </div>
-                    <p className=" text-xs md:text-sm text-black uppercase font-semibold md:tracking-[3px] ">Always honest, always affordable, always working</p>
+                    <p className=" text-xs md:text-sm text-white uppercase font-semibold md:tracking-[3px] ">Always honest, always affordable, always working</p>
                 </div>
             </section>
 

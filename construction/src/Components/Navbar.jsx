@@ -16,8 +16,8 @@ export default function Navbar () {
         // Array containing navigation items
         const navItems = [
           { id: 1, text: 'Home', link: "/" },
-          { id: 2, text: 'Company', link: "/company" },
-          { id: 3, text: 'Resources', link: "/resources" },
+          { id: 2, text: 'Services', link: "/services" },
+          { id: 3, text: 'Projects', link: "/projects" },
           { id: 4, text: 'About', link: "/about" },
           { id: 5, text: 'Contact', link: "/contact" },
         ];
